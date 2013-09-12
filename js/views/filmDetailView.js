@@ -19,12 +19,12 @@ var FilmDetailView = Backbone.View.extend({
 				'</tr></table>'+
 			'</div>'+
 			'{{#if isFavourite}}'+
-			'<div class="film-detail-unfavourite-button">'+
-				'<a type="button" id="unfavourite-button" data-container="body" data-toggle="popover" data-placement="top" data-content="Removed!" href="#/unFavourite/{{id}}" class="fav-button btn btn-danger" data-original-title="" title="">Remove from Favourites</a>'+
-			'</div>'+
+				'<div class="film-detail-unfavourite-button">'+
+					'<a type="button" id="unfavourite-button" data-container="body" data-toggle="popover" data-placement="top" data-content="Removed from Favourites!" href="#/unFavourite/{{id}}" class="fav-button btn btn-danger" data-original-title="" title="">Remove from Favourites</a>'+
+				'</div>'+
 			'{{else}}'+
-			'<div class="film-detail-favourite-button">'+
-				'<a type="button" id="favourite-button" data-container="body" data-toggle="popover" data-placement="top" data-content="Favourited!" href="#/addFavourites/{{id}}" class="fav-button btn btn-success" data-original-title="" title="">Favourite</a>'+
+				'<div class="film-detail-favourite-button">'+
+					'<a type="button" id="favourite-button" data-container="body" data-toggle="popover" data-placement="top" data-content="Favourited!" href="#/addFavourites/{{id}}" class="fav-button btn btn-success" data-original-title="" title="">Favourite</a>'+
 			'</div>'+
 			'{{/if}}'+
 			'<div class="film-detail-synopsis">'+

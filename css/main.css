@@ -35,14 +35,18 @@ body
 	/*min-width: 100%;*/
 }
 
+.row{
+	min-width: 100%;
+}
+
 .content
 {
 	max-width: 900px;
 	/*padding-top: 15%;*/
-	display: block;
+	/*display: block;
 	width: 100%;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto;*/
 }
 
 .film-display

@@ -53,8 +53,7 @@ var AppRouter = Backbone.Router.extend({
 
 		film.set('isFavourite', false);
 
-		// this.filmDetailView.model = this.films.get(item);
-		// $('#app').html(this.filmDetailView.render().el);
+		$('#app').html(this.favouritesView.render().el);
 	},
 
 	favourites: function() {
