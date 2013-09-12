@@ -4,6 +4,7 @@ var AppRouter = Backbone.Router.extend({
 		'' : 'home',
 		'films/:item' : 'filmDetails',
 		'addFavourites/:item' : 'addFavourites',
+		'unFavourite/:item' : 'unFavourite',
 		'favourites' : 'favourites'
 	},
 
@@ -37,8 +38,15 @@ var AppRouter = Backbone.Router.extend({
 
 	addFavourites: function(item) {
 		var film = this.films.get(item);
+		film.set('isFavourite', true);
 		this.favourites.add(film);
 		this.favourites.localStorage.create(film);
+	},
+
+	unFavourite: function(item) {
+		var film = this.films.get(item);
+		this.favourites.remove(item);
+		this.favourites.localStorage.destroy(film);
 	},
 
 	favourites: function() {

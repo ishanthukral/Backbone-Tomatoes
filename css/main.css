@@ -94,6 +94,13 @@ body
 	margin-left: 3%;
 }
 
+.film-detail-unfavourite-button .btn
+{
+	display: block;
+	margin-right: 3%;
+	margin-left: 3%;
+}
+
 .film-detail-synopsis
 {
 	/*background-color: #272822;*/
