@@ -2,7 +2,7 @@ var FilmView = Backbone.View.extend({
 	
 	template: Handlebars.compile(
 
-		'<div class="row">'+
+		'<div class="row film-display">'+
 		'{{#each models}}'+
 		'<a href="#/films/{{attributes.id}}">'+
 		'<img class="film-poster img-responsive col-xs-6 col-sm-4 col-md-3 col-lg-2" src="{{attributes.posters.profile}}">'+

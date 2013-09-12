@@ -2,7 +2,9 @@ var AppRouter = Backbone.Router.extend({
 
 	routes: {
 		'' : 'home',
-		'films/:item' : 'filmDetails'
+		'films/:item' : 'filmDetails',
+		'addFavourites/:item' : 'addFavourites',
+		'favourites' : 'favourites'
 	},
 
 	initialize: function() {
@@ -18,6 +20,10 @@ var AppRouter = Backbone.Router.extend({
 		this.filmDetailView = new FilmDetailView({
 			model: this.filmModel
 		});
+
+		this.favourites = new FavouriteCollection();
+		this.favourites.fetch();
+		this.favouritesView = new FilmView({collection: this.favourites});
 	},
 
 	home: function(){
@@ -27,6 +33,16 @@ var AppRouter = Backbone.Router.extend({
 	filmDetails: function(item) {
 		this.filmDetailView.model = this.films.get(item);
 		$('#app').html(this.filmDetailView.render().el);
+	},
+
+	addFavourites: function(item) {
+		var film = this.films.get(item);
+		this.favourites.add(film);
+		this.favourites.localStorage.create(film);
+	},
+
+	favourites: function() {
+		$('#app').html(this.favouritesView.render().el);
 	}
 
 });
