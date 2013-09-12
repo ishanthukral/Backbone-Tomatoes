@@ -19,7 +19,7 @@ var FilmDetailView = Backbone.View.extend({
 				'</tr></table>'+
 			'</div>'+
 			'<div class="film-detail-favourite-button">'+
-				'<a type="button"  href="#/addFavourites/{{id}}" class="btn btn-success">Favourite</a>'+
+				'<a type="button" id="favourite-button" data-container="body" data-toggle="popover" data-placement="top" data-content="Favourited!" href="#/addFavourites/{{id}}" class="fav-button btn btn-success" data-original-title="" title="">Favourite</a>'+
 			'</div>'+
 			'<div class="film-detail-synopsis">'+
 				'<h2>Synopsis</h2>'+
@@ -33,6 +33,15 @@ var FilmDetailView = Backbone.View.extend({
 					'{{/each}}'+
 				'</tr></table>'+
 			'</div>'+
+			'<script>'+
+				'$("#favourite-button").click(function(){'+
+					'console.log("here");'+
+					'$("#favourite-button").popover("show");'+
+					'setTimeout(function() {'+
+						'$("#favourite-button").popover("hide");'+
+					'}, 2000);'+
+				'});'+
+			'</script>'+
 		'</div>'
 	),
 
