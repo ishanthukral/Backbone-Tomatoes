@@ -15,11 +15,18 @@ body
 	box-shadow: 0 0 10px rgba(10, 10, 10, 0.2);
 	z-index: 3;
 	opacity: 0.8;
-	text-align: center;
+}
+
+.navbar .brand{
+	position: relative;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
 }
 
 .bottom-nav .btn-group{
-	padding-top: 4%;
+	padding-top: 3%;
 	padding-bottom: 3%;
 }
 
@@ -30,6 +37,7 @@ body
 
 .content
 {
+	max-width: 900px;
 	/*padding-top: 15%;*/
 	display: block;
 	width: 100%;
