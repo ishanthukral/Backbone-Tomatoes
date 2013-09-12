@@ -41,12 +41,20 @@ var AppRouter = Backbone.Router.extend({
 		film.set('isFavourite', true);
 		this.favourites.add(film);
 		this.favourites.localStorage.create(film);
+
+		// this.filmDetailView.model = this.films.get(item);
+		// $('#app').html(this.filmDetailView.render().el);
 	},
 
 	unFavourite: function(item) {
 		var film = this.films.get(item);
 		this.favourites.remove(item);
 		this.favourites.localStorage.destroy(film);
+
+		film.set('isFavourite', false);
+
+		// this.filmDetailView.model = this.films.get(item);
+		// $('#app').html(this.filmDetailView.render().el);
 	},
 
 	favourites: function() {
