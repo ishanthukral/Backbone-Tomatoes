@@ -1,6 +1,7 @@
 var FilmDetailView = Backbone.View.extend({
 
 	template: Handlebars.compile(
+		'<script>$(this).scrollTop(0);</script>'+
 		'<div class="row film-detail">'+
 			'<div class="film-detail-title">'+
 				'<h1>{{title}}</h1>'+

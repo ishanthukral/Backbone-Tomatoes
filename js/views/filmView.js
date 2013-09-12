@@ -1,7 +1,8 @@
 var FilmView = Backbone.View.extend({
 	
 	template: Handlebars.compile(
-
+		
+		'<script>$(this).scrollTop(0);</script>'+
 		'<div class="row film-display">'+
 			'{{#each models}}'+
 			'<a href="#/films/{{attributes.id}}">'+
