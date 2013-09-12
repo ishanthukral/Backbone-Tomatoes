@@ -11,15 +11,15 @@ body
 	padding-right: 2%;*/
 }
 
-.navbar {
+.top-navbar {
 	box-shadow: 0 0 10px rgba(10, 10, 10, 0.2);
 	z-index: 3;
 	opacity: 0.8;
 	text-align: center;
 }
 
-.navbar-fixed-bottom .btn-group{
-	padding-top: 3%;
+.bottom-nav .btn-group{
+	padding-top: 4%;
 	padding-bottom: 3%;
 }
 
