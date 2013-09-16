@@ -9,9 +9,9 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	initialize: function() {
-		// Initialize a Collection
 		this.films = new FilmCollection();
-		// Load the Rotten Tomato Data
+		
+		// Load data from Rotten Tomatoes
 		this.films.load();
 
 		this.filmModel = new FilmModel();
@@ -25,6 +25,8 @@ var AppRouter = Backbone.Router.extend({
 		this.favourites = new FavouriteCollection();
 		this.favourites.fetch();
 		this.favouritesView = new FilmView({collection: this.favourites});
+		
+		this.searchResults = Backbone.Collection.extend();
 	},
 
 	home: function(){
@@ -41,9 +43,7 @@ var AppRouter = Backbone.Router.extend({
 		film.set('isFavourite', true);
 		this.favourites.add(film);
 		this.favourites.localStorage.create(film);
-
-		// this.filmDetailView.model = this.films.get(item);
-		// $('#app').html(this.filmDetailView.render().el);
+		// Option - change collection to favourites
 	},
 
 	unFavourite: function(item) {
@@ -59,7 +59,6 @@ var AppRouter = Backbone.Router.extend({
 	favourites: function() {
 		$('#app').html(this.favouritesView.render().el);
 	}
-
 });
 
 var app = new AppRouter();

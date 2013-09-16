@@ -14,6 +14,15 @@ var FilmCollection = Backbone.Collection.extend({
 				self.reset(data.movies);
 			}
 		});
+	},
+
+	search: function(query) {
+		if (query == "") return this;
+
+		var pattern = new RegExp(query, "gi");
+		return _(this.filter(function(data) {
+			return pattern.test(data.get("title"));
+		}));
 	}
 
 });

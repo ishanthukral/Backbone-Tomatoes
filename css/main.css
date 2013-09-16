@@ -25,6 +25,11 @@ body
     margin: auto;
 }
 
+.navbar-form {
+	position: relative;
+	padding-top: 1%;
+}
+
 .bottom-nav .btn-group{
 	padding-top: 5%;
 	padding-bottom: 3%;

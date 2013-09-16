@@ -36,6 +36,11 @@
 	    				<h2>BackTomatoes</h2>
 	    			</div>
 	    		</div>
+	    		<form class="navbar-form navbar-left pull-right" role="search">
+      				<div class="form-group">
+        				<input type="text" class="form-control search" placeholder="Search">
+      				</div>
+    			</form>
 	    	</div>
   		</div>
 
@@ -54,6 +59,12 @@
 	    		</div>
 	    	</div>
   		</div>
+
+  		<script type="text/javascript">
+  			$('.search').on('keyup', function(e) {
+				app.filmView.search($(e.currentTarget).val());
+			});
+  		</script>
 
 	</body>
 

@@ -1,4 +1,7 @@
 var FilmView = Backbone.View.extend({
+
+	events: {
+	},
 	
 	template: Handlebars.compile(
 		'<div class="row film-display">'+
@@ -18,5 +21,10 @@ var FilmView = Backbone.View.extend({
 	render: function() {
 		this.$el.html(this.template(this.collection));
 		return this;
+	},
+
+	search: function(query) {
+		console.log(query);
+		this.collection.reset(this.collection.search(query)._wrapped);
 	}
 });
