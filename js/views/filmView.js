@@ -23,8 +23,15 @@ var FilmView = Backbone.View.extend({
 		return this;
 	},
 
+	renderSearchResults: function(collection) {
+		this.$el.html(this.template(collection));
+		return this;
+	},
+
 	search: function(query) {
 		console.log(query);
-		this.collection.reset(this.collection.search(query)._wrapped);
+		var searchResults = new Backbone.Collection(this.collection.search(query)._wrapped);
+		this.renderSearchResults(searchResults);
+		// this.collection.reset(this.collection.search(query)._wrapped);
 	}
 });
