@@ -17,7 +17,9 @@ var FilmCollection = Backbone.Collection.extend({
 	},
 
 	search: function(query) {
-		if (query == "") return this;
+		if (query == "") {
+			return this;
+		}
 
 		var pattern = new RegExp(query, "gi");
 		return _(this.filter(function(data) {

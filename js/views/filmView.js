@@ -29,9 +29,12 @@ var FilmView = Backbone.View.extend({
 	},
 
 	search: function(query) {
-		console.log(query);
-		var searchResults = new Backbone.Collection(this.collection.search(query)._wrapped);
-		this.renderSearchResults(searchResults);
-		// this.collection.reset(this.collection.search(query)._wrapped);
+		var searchResults = this.collection.search(query);
+		if (searchResults instanceof Backbone.Collection) {
+			this.renderSearchResults(searchResults);	
+		} else {
+			var searchResultsCollection = new Backbone.Collection(searchResults._wrapped);
+			this.renderSearchResults(searchResultsCollection);
+		}
 	}
 });
