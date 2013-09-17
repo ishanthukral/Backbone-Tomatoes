@@ -15,6 +15,12 @@ Backbone-Tomatoes
 * [Bootstrap 3](http://getbootstrap.com)
 * [JQuery](http://jquery.com)
 
+##Features
+
+* Loads the movies currently playing in theaters.
+* Allows users to favourite movies and stores those in HTML5 local storage.
+* Allows users to search through the movies in real-time.
+
 The MIT License
 ===============
 
