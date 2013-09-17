@@ -1,3 +1,7 @@
+/***********************
+	View & template for movie details
+************************/
+
 var FilmDetailView = Backbone.View.extend({
 
 	template: Handlebars.compile(

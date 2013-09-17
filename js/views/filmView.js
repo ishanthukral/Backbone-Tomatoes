@@ -1,3 +1,7 @@
+/***********************
+	View and template for home page
+************************/
+
 var FilmView = Backbone.View.extend({
 
 	events: {

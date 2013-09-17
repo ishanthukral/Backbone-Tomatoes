@@ -1,3 +1,8 @@
+/***********************
+	Collection for "Now Playing" movies 
+	returned from Rotten Tomatoes
+************************/
+
 var FilmCollection = Backbone.Collection.extend({
 
 	model: FilmModel,
@@ -16,6 +21,7 @@ var FilmCollection = Backbone.Collection.extend({
 		});
 	},
 
+	// Return movies where query matched the title
 	search: function(query) {
 		if (query == "") {
 			return this;
