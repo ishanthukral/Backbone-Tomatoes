@@ -20,6 +20,7 @@ Backbone-Tomatoes
 * Loads the movies currently playing in theaters.
 * Allows users to favourite movies and stores them in HTML5 local storage.
 * Allows users to search through the movies in real-time.
+* Features responsive design using [Bootstrap 3](http://getbootstrap.com).
 
 The MIT License
 ===============
