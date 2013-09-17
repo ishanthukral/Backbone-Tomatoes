@@ -25,9 +25,17 @@ body
     margin: auto;
 }
 
-.navbar-form {
+.navbar-form{
 	position: relative;
 	padding-top: 1%;
+}
+
+.searchbox-mobile{
+	position: relative;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
 }
 
 .bottom-nav .btn-group{
