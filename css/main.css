@@ -11,13 +11,15 @@ body
 	padding-right: 2%;*/
 }
 
-.top-navbar {
+.top-navbar
+{
 	box-shadow: 0 0 10px rgba(10, 10, 10, 0.2);
 	z-index: 3;
 	opacity: 0.8;
 }
 
-.navbar .brand{
+.navbar .brand
+{
 	position: relative;
     width: 100%;
     left: 0;
@@ -25,12 +27,14 @@ body
     margin: auto;
 }
 
-.navbar-form{
+.navbar-form
+{
 	position: relative;
 	padding-top: 1%;
 }
 
-.searchbox-mobile{
+.searchbox-mobile
+{
 	position: relative;
     width: 100%;
     left: 0;
@@ -38,17 +42,18 @@ body
     margin: auto;
 }
 
-.bottom-nav .btn-group{
+.bottom-nav .btn-group
+{
 	padding-top: 5%;
 	padding-bottom: 3%;
 }
 
 .container
 {
-	/*min-width: 100%;*/
 }
 
-.row{
+.row
+{
 	min-width: 100%;
 }
 
@@ -64,7 +69,7 @@ body
 
 .film-display
 {
-	padding-top: 12%;
+	/*padding-top: 12%;*/
 	padding-bottom: 12%;
 }
 
@@ -76,7 +81,8 @@ body
 	width: 150px;
 }
 
-.film-detail {
+.film-detail
+{
 
 }
 
