@@ -9,8 +9,10 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	initialize: function() {
+		// Keep a track of the current view
+		this.currentView;
+
 		this.films = new FilmCollection();
-		
 		// Load data from Rotten Tomatoes
 		this.films.load();
 
@@ -29,13 +31,18 @@ var AppRouter = Backbone.Router.extend({
 		this.searchResults = Backbone.Collection.extend();
 	},
 
-	home: function(){
+	home: function() {
 		$('#app').html(this.filmView.render().el);
+		this.currentView = 'home'
 	},
 
 	filmDetails: function(item) {
-		this.filmDetailView.model = this.films.get(item);
+		var movie = this.films.get(item);
+		if (this.isFavourited(movie)) movie.set('isFavourite', true);
+
+		this.filmDetailView.model = movie;
 		$('#app').html(this.filmDetailView.render().el);
+		this.currentView = 'details'
 	},
 
 	addFavourites: function(item) {
@@ -58,6 +65,17 @@ var AppRouter = Backbone.Router.extend({
 
 	favourites: function() {
 		$('#app').html(this.favouritesView.render().el);
+		this.currentView = 'favourites'
+	},
+
+	isFavourited: function(item) {
+		var movieID = item.id;
+		for (var i in this.favourites.models) {
+			if (movieID == this.favourites.models[i].id) {
+				return true;
+			}
+		}
+		return false;
 	}
 });
 

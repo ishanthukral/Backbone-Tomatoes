@@ -34,6 +34,7 @@ var FilmView = Backbone.View.extend({
 
 	search: function(query) {
 		var searchResults = this.collection.search(query);
+		
 		if (searchResults instanceof Backbone.Collection) {
 			this.renderSearchResults(searchResults);	
 		} else {

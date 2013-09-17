@@ -67,7 +67,13 @@
 
   		<script type="text/javascript">
   			$('.search').on('keyup', function(e) {
-				app.filmView.search($(e.currentTarget).val());
+  				// Call search on film view if current 
+  				// view is 'home', otherwise call on favourites
+  				if (app.currentView === 'home') {
+					app.filmView.search($(e.currentTarget).val());
+				} else {
+					app.favouritesView.search($(e.currentTarget).val());
+				}
 			});
   		</script>
 
