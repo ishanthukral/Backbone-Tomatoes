@@ -10,7 +10,7 @@ var FilmDetailView = Backbone.View.extend({
 			'<div class="film-detail-title">'+
 				'<h1>{{title}}</h1>'+
 			'</div>'+
-			'<div class="col-md-12 film-detail-poster" style="background-image:url({{posters.original}})">'+
+			'<div class="col-md-12 film-detail-poster" style="background-image:url({{posters.detailed}})">'+
 			'<br><br><br><br><br><br><br><br><br><br><br><br>'+
 			'<br><br><br><br><br><br><br><br><br><br><br><br>'+
 			'</div>'+

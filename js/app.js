@@ -42,7 +42,7 @@ var AppRouter = Backbone.Router.extend({
 
 		this.filmDetailView.model = movie;
 		$('#app').html(this.filmDetailView.render().el);
-		this.currentView = 'details'
+		this.currentView = 'details';
 	},
 
 	addFavourites: function(item) {

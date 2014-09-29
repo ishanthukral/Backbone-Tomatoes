@@ -16,6 +16,12 @@ var FilmCollection = Backbone.Collection.extend({
 					'apikey=3pug8qv5purwfsbkqfpgb4dc',
 			dataType: "jsonp",
 			success: function(data) {
+				// Workaround for API change where hi-def images are not returned
+				for (var i = 0; i < data.movies.length; i++) {
+					var movie = data.movies[i];
+					movie.posters.profile = movie.posters.profile.replace('tmb', 'pro');
+					movie.posters.detailed = movie.posters.detailed.replace('tmb', 'ori');
+				};
 				self.reset(data.movies);
 			}
 		});

@@ -10,6 +10,11 @@ var FilmModel = Backbone.Model.extend({
 		'isFresh' : false
 	},
 
+	getPoster: function() {
+		var posterUrl = this.attributes.posters.detailed;
+		return posterUrl.replace('tmp.jpg', 'ori.jpg');
+	},
+
 	toggleFavourite: function() {
 		var current = this.get('isFavourite');
 		this.set('isFavourite', !current);
